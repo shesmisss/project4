@@ -2,3 +2,6 @@
 
 __pycache__/
 PDF_DN_FOLDER/
+data/
+colab_version/
+local_version/
