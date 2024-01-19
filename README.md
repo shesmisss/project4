@@ -1,4 +1,4 @@
-![Binaryhood](Logo/BinaryhoodLogo.png)
+자세한 설명은...(생략)
 
 # ChatBot
 
