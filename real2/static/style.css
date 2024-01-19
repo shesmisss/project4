@@ -1,0 +1,66 @@
+/* 전체 페이지 스타일 */
+body {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Dancing Script', 'Diphylleia', cursive;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Dancing Script Regular'), local('DancingScript-Regular'),
+         url('/static/fonts/DancingScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Diphylleia';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Diphylleia Regular'), local('Diphylleia-Regular'),
+         url('/static/fonts/Diphylleia-Regular.ttf') format('truetype');
+}
+
+/* 제목 스타일 */
+h1, h2 {
+    margin: 40px 0;
+}
+
+/* 텍스트 입력 필드 스타일 */
+.characters {
+    width: 50%; /* 폭 조절 */
+    padding: 10px; /* 내부 여백 */
+    margin-bottom: 10px; /* 필드 간 간격 */
+    font-size: 16px; /* 폰트 크기 조절 */
+}
+
+/* 텍스트 입력 필드 스타일 */
+.form-control {
+    width: 50%; /* 폭 조절 */
+    padding: 10px; /* 내부 여백 */
+    font-size: 16px; /* 폰트 크기 */
+    margin-bottom: 10px; /* 필드 간 간격 */
+}
+
+.form-select {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333; /* 글씨 색상 변경 */
+    background-color: #fff; /* 배경 색상을 흰색으로 설정 */
+    border: 1px solid #ccc; /* 테두리 색상 지정 */
+}
+
+/* 소설 출력 영역 스타일 */
+.novel-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif; /* 기본 폰트로 변경 */
+}
+
+.novel-content {
+    white-space: pre-wrap; /* 소설의 줄바꿈을 유지 */
+}

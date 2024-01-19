@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+		<title>Big Bang Novel</title>
+	</head>
+</head>
+<body>
+    <h1>Big Bang Novel</h1>
+    <h2>소설 생성 프로그램</h2>
+	
+	<form method="POST">		
+		{{ form.hidden_tag() }}
+	
+		<!-- 등장인물 필드 -->
+		<label for="characters">{{ form.characters.label.text }}</label>
+		<br>
+		<input type="text" name="characters" class="form-control" value="{{ form.characters.data or '' }}">
+		<br>
+		<!-- 구체적 설정 필드 -->
+		<label for="setting">{{ form.setting.label.text }}</label>
+		<br>
+		<textarea name="setting" class="form-control">{{ form.setting.data or '' }}</textarea>
+		<br>
+	
+		<!-- 장르 선택 필드 -->
+		<label for="genre">{{ form.genre.label.text }}</label>
+		<br>
+		<select name="genre" class="form-select">
+			{% for value, label in form.genre.choices %}
+				<option value="{{ value }}" {{ 'selected' if form.genre.data == value else '' }}>{{ label }}</option>
+			{% endfor %}
+		</select>
+		
+		<br>
+		<!-- 사투리 선택 필드 -->
+		<label for="dialect">{{ form.dialect.label.text }}</label>
+		<br>
+		<select name="dialect" class="form-select">
+		    {% for value, label in form.dialect.choices %}
+		        <option value="{{ value }}" {{ 'selected' if form.dialect.data == value else '' }}>{{ label }}</option>
+		    {% endfor %}
+		</select>
+		<br>
+
+	
+		<!-- 제출 버튼 -->
+		<input type="submit" value="{{ form.submit.label.text }}" class="btn btn-success">
+	</form>
+	<br>
+	
+	
+    <!-- 소설 출력 영역 (항상 표시됨) -->
+    <div class="novel-container">
+        <p class="novel-content">{{ novel|safe }}</p>
+    </div>
+
+	<a href="/">Back to Home</a>
+</body>
+</html>
